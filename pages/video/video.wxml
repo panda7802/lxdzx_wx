@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container_index">
+
+    <view wx:if="{{video_item}}"> 
+        <view class="video_item_title">{{video_item.title}}</view>
+        <view class="video_item_time"><text >{{video_item.upload_time}}</text></view>
+        <image class="video_item_img" mode="aspectFit" 
+            src="https://www.pandafly.cn/static/files/recv/{{video_item.pic_url}}"></image>
+        <view class="video_item_desc"><text>{{video_item.desc}}</text></view>
+        <video class="video_item_img" src="{{video_item.video_url}}"></video>
+     </view>
+</view>

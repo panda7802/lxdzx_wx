@@ -2,22 +2,26 @@
 <view class="container_index">
   <!--<view  bindtap="bindViewTap" class="userinfo">
     <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>/{{item.pic_url}}
   </view>-->
- <view class="usermotto">
+ <!--<view class="usermotto">
     <text class="user-motto">{{motto}}</text>
-  </view>
-  <view class="usermotto" >
+  </view>-->
+
+  <view style="margin-top: 20px;width:100%;text-align: center;" >
     <image style="width: 80%;" mode="widthFix" src="https://www.pandafly.cn/static/img/head.jpg"></image>
   </view>
 
-   <!--
-  <view class="usermotto">
- <video  style="width: 80%;" author="真相君" src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"> </video >
-   <view><text class="userinfo-nickname">{{userInfo.nickName}}</text></view>
-    <video  style="width: 80%;" author="F" src="http://200055539.vod.myqcloud.com/200055539_d458e860ecd711e680aa5114891992e5.f0.mp4"></video>
-  </view> -->
+  <view class="video_list">
+      <block wx:for-items="{{video_list}}" wx:key="upload_time"  >
+          <view ><text class="video_item_title" >{{item.title}}</text></view>
+          <view class="video_item_time"><text >{{item.upload_time}}</text></view>
+          <image class="video_item_img" mode="aspectFill" 
+              src="https://www.pandafly.cn/static/files/recv/{{item.pic_url}}"></image>
+          <view class="video_item_desc">{{item.desc}}</view>
+          <navigator class="video_item_show_detail" url="../video/video?id={{item.id}}">查看全文</navigator>
+          <view style="width:100%;height:2px;background: #888;margin-bottom:20px;"></view>
+      </block>
+  </view>
 
-  
- 
 </view>

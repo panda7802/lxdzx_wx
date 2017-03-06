@@ -36,6 +36,16 @@ App({
     }
   },
   globalData:{
-    userInfo:null
+    userInfo:null,
+    download_fix:"https://www.pandafly.cn/static/files/recv",
   }
+  // ,
+  // window:{
+  //   "enablePullDownRefresh":true,
+  //   "navigationBarBackgroundColor": "#ffffff",
+  //   "navigationBarTextStyle": "black",
+  //   "navigationBarTitleText": "微信接口功能演示",
+  //   "backgroundColor": "#eeeeee",
+  //   "backgroundTextStyle": "light"
+  // }
 })
